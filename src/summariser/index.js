@@ -5,7 +5,7 @@ const buildPrompt = require('./prompt')
 const OUTPUT_PATH = path.resolve(__dirname, '../../output/newsletter.md')
 
 const runSummariser = async (scrapedData) => {
-  console.log('🤖 Summarising with OpenRouter...')
+  console.log(' Summarising with OpenRouter...')
 
   const prompt = buildPrompt(scrapedData)
 

@@ -7,7 +7,7 @@ const scrapeTldrAi = require('./sources/tldrAi')
 const OUTPUT_PATH = path.resolve(__dirname, '../../output/raw.json')
 
 const runScraper = async () => {
-  console.log('🕷️  Scraping sources...')
+  console.log('  Scraping sources...')
 
   const results = await Promise.allSettled([
     scrapeNodeWeekly(),
@@ -21,11 +21,11 @@ const runScraper = async () => {
 
   const failed = results.filter(r => r.status === 'rejected')
   if (failed.length) {
-    failed.forEach((f, i) => console.warn(`⚠️  Source ${i} failed:`, f.reason?.message))
+    failed.forEach((f, i) => console.warn(`  Source ${i} failed:`, f.reason?.message))
   }
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(data, null, 2))
-  console.log(`✅  Scraped ${data.length} sources → output/raw.json`)
+  console.log(`  Scraped ${data.length} sources → output/raw.json`)
 
   return data
 }
