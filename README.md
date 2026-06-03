@@ -39,9 +39,9 @@ newsletter-bot/
 │   ├── raw.json                  # Raw scraped articles
 │   ├── newsletter.md             # AI-generated newsletter post
 │   └── poster.png                # Visual poster image
-├── main.js                       # Entry point — runs full pipeline
+├── main.js                       # Entry point 
 ├── config.js                     # Source URLs and output paths
-├── .env                          # API keys (never commit this)
+├── .env                          # API keys 
 └── package.json
 ```
 
@@ -87,7 +87,6 @@ npm install
 
 - Go to [openrouter.ai](https://openrouter.ai)
 - Sign up and create a free API key
-- No credit card required
 
 ### 4. Create your `.env` file
 
